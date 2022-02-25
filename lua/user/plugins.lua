@@ -62,6 +62,7 @@ return packer.startup(function(use)
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
+  use 'ellisonleao/gruvbox.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -82,14 +83,26 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
+  use 'tami5/sqlite.lua'
   use "nvim-telescope/telescope.nvim"
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run  = 'make'
+  }
+  use 'nvim-telescope/telescope-frecency.nvim'
 
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use "JoosepAlviste/nvim-ts-context-commentstring"
+  -- use "JoosepAlviste/nvim-ts-context-commentstring"
+
+
+  -- skywind3000
+  use 'skywind3000/asynctasks.vim'
+  use 'skywind3000/asyncrun.vim'
+
 
   -- Git
   use "lewis6991/gitsigns.nvim"
