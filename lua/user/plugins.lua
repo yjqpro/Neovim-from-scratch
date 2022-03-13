@@ -58,6 +58,7 @@ return packer.startup(function(use)
 	use("goolord/alpha-nvim")
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 	use("folke/which-key.nvim")
+	use("tpope/vim-surround")
 
 	-- Colorschemes
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -73,8 +74,8 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp")
 
 	-- snippets
-	use("L3MON4D3/LuaSnip") --snippet engine
-	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
+	-- use("L3MON4D3/LuaSnip") --snippet engine
+	-- use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- enable LSP
@@ -92,11 +93,11 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope-frecency.nvim")
 
 	-- Treesitter
-	-- use({
-	-- 	"nvim-treesitter/nvim-treesitter",
-	-- 	run = ":TSUpdate",
-	-- })
-	-- use "JoosepAlviste/nvim-ts-context-commentstring"
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+	})
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- skywind3000
 	use("skywind3000/asynctasks.vim")
